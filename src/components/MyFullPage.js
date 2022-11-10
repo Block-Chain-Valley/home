@@ -8,6 +8,7 @@ import SecondIcon from '../assets/Etherium-2 copy 1.svg';
 import Footer from './Footer';
 import Partners from '../assets/Frame 124.svg';
 import './btn.css';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 const Fullimg = styled.img`
   width: 100%;
@@ -205,6 +206,13 @@ function MyFullPage() {
 
   console.log('this is scrolly' + scrollY);
   console.log('this is windowHeight' + windowSize.height);
+
+  const animatedItem = {
+    0: useScrollFadeIn('up', 1, 0),
+    1: useScrollFadeIn('up', 1, 0.2),
+    2: useScrollFadeIn('up', 1, 0.3),
+    3: useScrollFadeIn('up', 1, 0.4),
+  };
   return (
     <>
       <SlideBox height={windowSize.height} width={windowSize.width}>
@@ -217,7 +225,7 @@ function MyFullPage() {
         </PBox>
       </SlideBox>
       <SecondTotal>
-        <SecondBox>
+        <SecondBox {...animatedItem[0]}>
           <div>
             <Icon src={FirstIcon} alt="icon 1"></Icon>
           </div>
@@ -226,7 +234,7 @@ function MyFullPage() {
             <Detail>WEB3의 진정한 가치를 학습하는 공간, 자신의 미래를 위해 준비를 하는 공간. </Detail>
           </Text>
         </SecondBox>
-        <SecondBox>
+        <SecondBox {...animatedItem[1]}>
           <Text2>
             <Title>Our activities</Title>
             <Detail>
@@ -239,7 +247,7 @@ function MyFullPage() {
           </div>
         </SecondBox>
       </SecondTotal>
-      <Third>
+      <Third {...animatedItem[2]}>
         <div>
           <MediumTitle>Recent Medium</MediumTitle>
         </div>
@@ -247,7 +255,7 @@ function MyFullPage() {
       </Third>
       <LastContent>
         <ExceptFooter height={windowSize.height - 189.2}>
-          <GoToJoin>
+          <GoToJoin {...animatedItem[3]}>
             <JoinTitle>Join us</JoinTitle>
             <JoinText>
               <BoldDetail>우리는 혼자 할 수 없고, 함께해야만 할 수 있다는 것을 확신합니다.</BoldDetail>

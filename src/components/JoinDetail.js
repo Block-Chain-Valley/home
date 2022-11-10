@@ -50,6 +50,9 @@ const MessageL = styled.div`
 const DetailMessage = styled.p`
   line-height: 40px;
   text-shadow: 0px 0px 50px rgba(6, 61, 285, 0.8);
+  @media all and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const JoinDeatil = ({ setObserver, callback }) => {

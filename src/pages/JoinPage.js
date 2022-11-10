@@ -29,6 +29,9 @@ const Title = styled.p`
   text-shadow: 0px 0px 50px rgba(6, 61, 285, 0.8);
   line-height: 50px;
   margin: 10px 20vw;
+  @media all and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const NotNowTop = styled.p`
