@@ -78,27 +78,7 @@ function JoinPage() {
   console.log('this is scrolly' + scrollY);
   console.log('this is windowHeight' + windowSize.height);
 
-  return (
-    <Main>
-      <PageBox height={windowSize.height - 100} paddingBottom={0}>
-        <Title>다가오는 WEB 3의 미래를 블록체인 밸리에서</Title>
-        <Title>함께 만들어갈 신입 node를 모집합니다!</Title>
-        <Lottie animationData={animationData} style={{ width: '150px', marginTop: '130px' }} />
-      </PageBox>
-      <TimeLineDiv>
-        <TimelineObserver
-          initialColor="#e5e5e5"
-          fillColor="#4350AF"
-          handleObserve={setObserver => <JoinDeatil callback={onCallback} setObserver={setObserver} />}
-        />
-      </TimeLineDiv>
-      <PageBox height={windowSize.height - 100} paddingBottom={100}>
-        <NotNowTop>지금은 지원 기간이 아닙니다</NotNowTop>
-        <NotNow>지원 기간에 업로드될 공지를 확인해주세요</NotNow>
-      </PageBox>
-      <Footer />
-    </Main>
-  );
+  return <div></div>;
 }
 
 export default JoinPage;

@@ -91,6 +91,7 @@ function MediumCard() {
         setInfo(null);
         setLoading(true);
         const { data: dataSet } = await axios.get(`${PROXY + URL}`);
+        console.log(dataSet);
         setInfo(parseStr(dataSet));
       } catch (e) {
         setError(e);

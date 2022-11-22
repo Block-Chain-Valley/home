@@ -203,8 +203,6 @@ function MyFullPage() {
     };
   });
 
-  console.log('this is scrolly' + scrollY);
-  console.log('this is windowHeight' + windowSize.height);
   return (
     <>
       <SlideBox height={windowSize.height} width={windowSize.width}>
